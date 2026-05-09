@@ -1,7 +1,7 @@
 """
 timed-tasks 插件主入口
 
-宿主应用 Python 插件 SDK 入口，粘合：
+肥牛 Python 插件 SDK 入口，粘合：
   - utils 持久化加载
   - scheduler 调度
   - handlers 触发执行

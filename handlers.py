@@ -1,7 +1,7 @@
 """
 触发执行器：到点后实际"做事"的地方
 
-三种类型，全部通过 plugin_sdk 的 send_message 触发宿主应用 voiceChat 完整链路
+三种类型，全部通过 plugin_sdk 的 send_message 触发肥牛 voiceChat 完整链路
 （LLM 推理 + 工具调用 + TTS 播报），让 AI 用人格化的口吻说出来
 """
 
