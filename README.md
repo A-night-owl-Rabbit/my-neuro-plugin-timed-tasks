@@ -180,7 +180,14 @@ plugins/community/timed-tasks/
 ## 故障排查
 
 **问：启用后日志报 `ModuleNotFoundError: No module named 'apscheduler'`**
-答：优先用本目录离线安装：`<python> -m pip install --no-index --find-links=./vendor -r requirements.txt`；或在线：`pip install apscheduler`。
+
+答：优先在本插件目录下用宿主自带的 Python 做离线安装，例如：
+
+```powershell
+<你的python.exe> -m pip install --no-index --find-links=./vendor -r requirements.txt
+```
+
+将 `<你的python.exe>` 换成实际解释器路径。若可访问 PyPI，也可在线执行：`pip install apscheduler`。
 
 **问：节假日判断失败**
 答：检查能否访问 `http://timor.tech/api/holiday/year/2026`。失败时插件会回退到「周末算节假日，工作日算工作日」。
