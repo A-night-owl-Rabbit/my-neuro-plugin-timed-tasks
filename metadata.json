@@ -1,0 +1,11 @@
+{
+  "name": "timed-tasks",
+  "displayName": "定时任务",
+  "version": "1.0.0",
+  "author": "community (ported from kjqwer/astrbot_plugin_sy)",
+  "description": "AI 智能定时任务：到点提醒、自动执行任务、定时调用工具，支持每日/每周/每月/每年重复与工作日常驻/节假日过滤。",
+  "framework_version": ">=1.0.0",
+  "lang": "python",
+  "main": "index.py",
+  "repo": "https://github.com/A-night-owl-Rabbit/my-neuro-plugin-timed-tasks"
+}

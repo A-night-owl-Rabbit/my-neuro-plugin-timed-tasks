@@ -1,0 +1,65 @@
+{
+  "data_file": {
+    "title": "数据文件路径",
+    "description": "存储定时任务的 JSON 文件路径，相对于 live-2d 目录",
+    "type": "string",
+    "default": "AI记录室/定时任务.json",
+    "value": "AI记录室/定时任务.json"
+  },
+  "enable_holiday": {
+    "title": "启用节假日过滤",
+    "description": "支持「仅工作日」「仅法定节假日」触发，需要联网调用 timor.tech 接口（本地缓存 30 天）",
+    "type": "boolean",
+    "default": true,
+    "value": true
+  },
+  "enable_context": {
+    "title": "用对话上下文生成提醒",
+    "description": "开启后到点会结合最近对话生成更自然的提醒；关闭则使用模板",
+    "type": "boolean",
+    "default": true,
+    "value": true
+  },
+  "max_context_count": {
+    "title": "最大上下文条数",
+    "description": "结合对话历史时使用的最大消息条数",
+    "type": "int",
+    "default": 5,
+    "value": 5
+  },
+  "reminder_prompt_template": {
+    "title": "提醒提示词模板（关闭上下文时使用）",
+    "description": "可用占位符：{user_name} {reminder_text} {current_time}",
+    "type": "text",
+    "default": "你需要提醒用户「{reminder_text}」。请用你平时的口吻、自然友好地说出这条提醒，不用解释这是预设。",
+    "value": "你需要提醒用户「{reminder_text}」。请用你平时的口吻、自然友好地说出这条提醒，不用解释这是预设。"
+  },
+  "task_prompt_template": {
+    "title": "任务提示词模板",
+    "description": "到点触发任务时附加给 AI 的提示词。可用占位符：{task_text} {current_time}",
+    "type": "text",
+    "default": "[定时任务触发] 现在请执行：{task_text}。直接执行并把结果用你的口吻告诉用户，不用解释这是预设任务。",
+    "value": "[定时任务触发] 现在请执行：{task_text}。直接执行并把结果用你的口吻告诉用户，不用解释这是预设任务。"
+  },
+  "command_prompt_template": {
+    "title": "指令任务提示词模板",
+    "description": "到点调用工具时的提示词。可用占位符：{tool_name} {description} {current_time}",
+    "type": "text",
+    "default": "[定时任务触发] 请调用工具 {tool_name} 完成「{description}」，并把结果用你的口吻自然地告诉用户。",
+    "value": "[定时任务触发] 请调用工具 {tool_name} 完成「{description}」，并把结果用你的口吻自然地告诉用户。"
+  },
+  "max_tasks": {
+    "title": "最大任务数",
+    "description": "全局最多保留多少条定时任务，超出后拒绝添加。0 = 不限制",
+    "type": "int",
+    "default": 50,
+    "value": 50
+  },
+  "holiday_api": {
+    "title": "节假日数据 API",
+    "description": "默认使用 timor.tech 公益接口；如需替换可改为同协议的镜像",
+    "type": "string",
+    "default": "http://timor.tech/api/holiday/year/",
+    "value": "http://timor.tech/api/holiday/year/"
+  }
+}
