@@ -2,9 +2,6 @@
 
 为 **My Neuro / live-2d** 宿主提供 **可调度定时能力**：到点由 AI 以自然语气提醒、自动执行描述任务，或在指定时间触发某个已注册的 LLM 工具。
 
-> 核心调度逻辑移植自 [kjqwer/astrbot_plugin_sy](https://github.com/kjqwer/astrbot_plugin_sy)，已去除 IM 机器人专用部分，改为基于 Python `plugin_sdk` 与宿主语音链路对接。
-
-## 功能概览
 
 - **三种动作**
   - **reminder（提醒）**：到点生成一条面向用户的提醒话术。
