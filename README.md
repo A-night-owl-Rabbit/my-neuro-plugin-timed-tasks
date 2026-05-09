@@ -2,9 +2,7 @@
 
 让肥牛拥有 **真正的定时触发能力** —— 到点了 AI 用自己的口吻提醒你、自动调用工具完成任务。
 
-> 移植自 [kjqwer/astrbot_plugin_sy](https://github.com/kjqwer/astrbot_plugin_sy)，保留了原版的核心调度引擎（APScheduler + 节假日 API + cron 表达式构造），删除了 QQ/微信机器人专用的部分，改为用肥牛的 plugin SDK 让 AI 主动说话。
 
----
 
 ## 功能
 
